@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignments.HomePageController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Text layoutX="252.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps Completed Today">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="265.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stairs Climbed Today">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="272.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body Mass Index">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="242.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lean and Fat Mass Ratio">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="265.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resting Heart Rate">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="288.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep Hygiene">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="stepsCount" layoutX="490.0" layoutY="208.0" prefHeight="18.0" prefWidth="200.0" progress="0.8" />
+            <ProgressBar fx:id="stairsCount" layoutX="490.0" layoutY="255.0" prefHeight="18.0" prefWidth="200.0" progress="0.7" />
+            <ProgressBar fx:id="RatioProgress" layoutX="491.0" layoutY="351.0" prefHeight="18.0" prefWidth="200.0" progress="0.86" />
+            <ProgressBar fx:id="restingHeartrate" layoutX="492.0" layoutY="398.0" prefHeight="18.0" prefWidth="200.0" progress="0.86" />
+            <ProgressBar fx:id="SleepProgress" layoutX="491.0" layoutY="448.0" prefHeight="18.0" prefWidth="200.0" progress="0.86" />
+            <Circle fill="STEELBLUE" layoutX="312.0" layoutY="119.0" radius="54.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text layoutX="224.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="99.0" fitWidth="100.0" layoutX="262.0" layoutY="70.0">
+               <image>
+                  <Image url="@ProfilePicture.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="stepsCountGoal" layoutX="621.0" layoutY="117.0" prefHeight="21.0" prefWidth="60.0" promptText="2000" />
+            <TextField fx:id="stairsCountGoal" layoutX="621.0" layoutY="150.0" prefHeight="26.0" prefWidth="60.0" promptText="1000" />
+            <Text layoutX="451.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Daily Stair Count Goal:" />
+            <Text layoutX="450.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Daily Steps Count Goal:" />
+            <Button layoutX="699.0" layoutY="146.0" mnemonicParsing="false" onAction="#set" text="Save" />
+            <Label fx:id="lbl" layoutX="354.0" layoutY="36.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSteps" layoutX="698.0" layoutY="208.0" />
+            <Label fx:id="lblStairs" layoutX="698.0" layoutY="255.0" />
+            <Label fx:id="lblRatio" layoutX="698.0" layoutY="350.0" />
+            <Label fx:id="lblSleep" layoutX="698.0" layoutY="448.0" text="L" />
+            <Label layoutX="724.0" layoutY="399.0" text="BMP" />
+            <Label fx:id="lblHeartrate" layoutX="701.0" layoutY="399.0" />
+            <Label fx:id="lblBMI" layoutX="697.0" layoutY="303.0" text="Label" />
+            <ProgressBar fx:id="BMI" layoutX="489.0" layoutY="303.0" prefHeight="18.0" prefWidth="200.0" progress="0.86" />
+            <Text layoutX="731.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="steps" />
+            <Text layoutX="732.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="stairs" />
+            <TextField fx:id="SleepField" layoutX="621.0" layoutY="85.0" prefHeight="26.0" prefWidth="60.0" promptText="e.g. 9" />
+            <Text layoutX="451.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour Slept Tonight Goal:" />
+            <TextField fx:id="Ratio" layoutX="621.0" layoutY="51.0" prefHeight="26.0" prefWidth="60.0" promptText="e.g. 12" />
+            <Text layoutX="451.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lean/Fat Mass Ratio Goal:" />
+            <Text layoutX="682.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" />
+            <Text layoutX="684.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hours" />
+            <Text layoutX="724.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hours" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-5.0" layoutY="-15.0" prefHeight="463.0" prefWidth="177.0" style="-fx-background-color: Silver;">
+         <children>
+            <Button layoutY="116.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #808080 #808080 #808080 #808080;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="foodButton" layoutY="173.0" mnemonicParsing="false" onAction="#toFoodPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080 #8 LIGHTGREY8080;" text="Food" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="aerobicButton" layoutY="230.0" mnemonicParsing="false" onAction="#toAerobicPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Aerobics" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="resistanceButton" layoutY="288.0" mnemonicParsing="false" onAction="#toResistancePage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Resistance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="attendanceButon" layoutY="345.0" mnemonicParsing="false" onAction="#toAttendancePage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Gym Attendance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mentalButton" layoutY="402.0" mnemonicParsing="false" onAction="#toMentalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Mental" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="medicalButton" layoutY="460.0" mnemonicParsing="false" onAction="#toMedicalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Medical" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="71.0" fitWidth="169.0" layoutX="9.0" layoutY="31.0">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

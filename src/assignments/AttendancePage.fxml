@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignments.AttendanceController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="label1" layoutX="126.0" layoutY="124.0" minHeight="16" minWidth="69" />
+      <AnchorPane layoutY="3.0" prefHeight="538.0" prefWidth="162.0" style="-fx-background-color: Silver;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="169.0" layoutX="9.0" layoutY="32.0">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="homepageButton" layoutY="138.0" mnemonicParsing="false" onAction="#toHomepage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <Button fx:id="foodButton" layoutY="195.0" mnemonicParsing="false" onAction="#toFoodPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Food" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="aerobicsButton" layoutY="252.0" mnemonicParsing="false" onAction="#toAerobicsPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Aerobics" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="resistanceButton" layoutY="310.0" mnemonicParsing="false" onAction="#toResistancePage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Resistance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="367.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #808080;" text="Gym Attendance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mentalButton" layoutY="424.0" mnemonicParsing="false" onAction="#toMentalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Mental" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="medicalButton" layoutY="482.0" mnemonicParsing="false" onAction="#toMedicalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Medical" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text layoutX="356.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym Attendance">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="Yes" layoutX="450.0" layoutY="244.0" mnemonicParsing="false" onAction="#submit" prefHeight="0.0" prefWidth="95.0" text="Submit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="385.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Gym Attendance Table">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="375.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Did You Do Today?">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="descField" layoutX="342.0" layoutY="163.0" prefHeight="39.0" prefWidth="302.0" />
+      <TableView fx:id="attend" layoutX="224.0" layoutY="355.0" onSort="#submit" prefHeight="172.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="123.2000732421875" text="Date" />
+          <TableColumn fx:id="descColumn" prefWidth="415.19989013671875" text="Description" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

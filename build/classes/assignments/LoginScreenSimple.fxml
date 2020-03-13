@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: Grey;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignments.LoginScreenSimpleController">
+    <stylesheets>
+        <URL value="@loginscreensimple.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="511.0" fitWidth="331.0">
+         <image>
+            <Image url="@Fitness1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="452.0" layoutY="137.0" prefHeight="238.0" prefWidth="239.0" style="-fx-background-color: SteelBlue; -fx-region-border: black;">
+         <children>
+            <TextField fx:id="textEmail" layoutX="36.0" layoutY="60.0" promptText="email" />
+            <PasswordField fx:id="textPassword" layoutX="36.0" layoutY="102.0" promptText="password" />
+            <Button fx:id="registerButton" layoutX="57.0" layoutY="187.0" mnemonicParsing="false" onAction="#actionRegister" prefHeight="27.0" prefWidth="124.0" text="Register" />
+            <Button fx:id="loginButton" layoutX="57.0" layoutY="145.0" mnemonicParsing="false" onAction="#actionLogin" prefHeight="27.0" prefWidth="124.0" text="Login" />
+            <Label layoutX="89.0" layoutY="20.0" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Line endX="111.0" endY="102.0" layoutX="341.0" layoutY="35.0" startX="111.0" startY="340.0" strokeWidth="2.0" />
+      <Line endX="340.0" endY="330.0" layoutX="351.0" layoutY="45.0" startX="102.0" startY="331.0" strokeWidth="2.0" />
+      <Line endX="331.4141845703125" endY="318.58575439453125" layoutX="361.0" layoutY="55.0" startX="330.0" startY="82.0" strokeWidth="2.0" />
+      <Line endX="320.70709228515625" endY="70.58578491210938" layoutX="371.0" layoutY="65.0" startX="80.0" startY="71.0" strokeWidth="2.0" />
+   </children>
+</AnchorPane>

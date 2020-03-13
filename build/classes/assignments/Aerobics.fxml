@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignments.AerobicsController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="label1" layoutX="136.0" layoutY="130.0" minHeight="16" minWidth="69" />
+      <Text layoutX="234.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Text>
+      <TextField fx:id="TypeField" layoutX="389.0" layoutY="106.0" prefHeight="26.0" prefWidth="178.0" promptText="Enter Type of Aerobics Exercise" />
+      <Text layoutX="234.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance (km)">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Text>
+      <TextField fx:id="DistanceField" layoutX="389.0" layoutY="161.0" prefHeight="26.0" prefWidth="178.0" promptText="Enter Distance" />
+      <Text layoutX="234.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time (mins)">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Text>
+      <TextField fx:id="TimeField" layoutX="389.0" layoutY="218.0" prefHeight="26.0" prefWidth="178.0" promptText="Enter Time Spent" />
+      <Text layoutX="368.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Aerobic Progress">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutY="-37.0" prefHeight="500.0" prefWidth="178.0" style="-fx-background-color: Silver;">
+         <children>
+            <Button fx:id="homepageButton" layoutY="138.0" mnemonicParsing="false" onAction="#toHomepage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Button>
+            <Button fx:id="foodButton" layoutY="195.0" mnemonicParsing="false" onAction="#toFoodPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Food" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="252.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #808080;" text="Aerobics" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="resistanceButton" layoutY="310.0" mnemonicParsing="false" onAction="#toResistancePage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Resistance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="attendanceButton" layoutY="367.0" mnemonicParsing="false" onAction="#toAttendancePage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Gym Attendance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="mentalButton" layoutY="424.0" mnemonicParsing="false" onAction="#toMentalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Mental" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="medicalButton" layoutY="482.0" mnemonicParsing="false" onAction="#toMedicalPage" prefHeight="55.0" prefWidth="178.0" style="-fx-background-color: #8 LIGHTGREY8080;" text="Medical" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="71.0" fitWidth="169.0" layoutX="8.0" layoutY="54.0">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="404.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aerobics">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="Submit" layoutX="426.0" layoutY="270.0" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="105.0" text="SUBMIT">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="212.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Goal">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="198.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance Goal">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="623.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Goals">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="DistanceGoalField" layoutX="608.0" layoutY="161.0" prefHeight="26.0" prefWidth="137.0" promptText="Enter Distance Goal" />
+      <TextField fx:id="TimeGoalField" layoutX="608.0" layoutY="218.0" prefHeight="26.0" prefWidth="137.0" promptText="Enter Time Goal" />
+      <ProgressBar fx:id="TimeProgress" layoutX="324.0" layoutY="366.0" prefHeight="35.0" prefWidth="430.0" progress="0.0" />
+      <ProgressBar fx:id="DistanceProgress" layoutX="324.0" layoutY="427.0" prefHeight="35.0" prefWidth="430.0" progress="0.0" />
+    </children>
+</AnchorPane>
